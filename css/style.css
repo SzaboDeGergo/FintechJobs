@@ -7,26 +7,33 @@ body {
 
 
 header {
-    background: rgba(16, 16, 16, 0.8) url("../images/Netherlands.jpg");
+    background: rgba(16, 16, 16, 0.6) url("../images/Netherlands.jpg");
     background-position: center;
     background-size: cover;
     background-blend-mode: overlay;
 }
 
 h1 {
-    font-size: 4vw;
+    font-size: 3rem;
     font-weight: 700;
     line-height: 1.5;
 }
 
 h2 {
-    font-size: 2vw;
+    font-size: 2rem;
     line-height: 1.5;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 1.5;
+    font-weight: 400;
+}
+
+h4 {
+    line-height: 1.5;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .navbar-brand {
@@ -75,6 +82,35 @@ h3 {
     font-weight: 500;
 }
 
+
+/* ABOUT US */
+
+.about-row {
+    margin: 50px;
+}
+
+.card-box {
+    margin-bottom: 20px;
+}
+
+.card {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+
+.about-us-fa {
+    font-size: 3.5rem;
+    padding: 2%;
+    color: #FF9B00;
+}
+
+.card-title {
+    padding-bottom: 20px;
+}
+
+
+
+
 @media only screen and (max-width: 600px) {
     h1 {
         font-size: 2.2rem;
@@ -94,7 +130,11 @@ h3 {
     }
 
     h3 {
-        font-size: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .container-fluid {
+        padding: 5% 1%;
     }
 
 }
