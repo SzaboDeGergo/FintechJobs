@@ -5,7 +5,7 @@ let currentLanguage = 'hu';
 
 // Load the translations
 const loadTranslations = async (lang) => {
-  const response = await fetch(`../translations/${lang}.json`);
+  const response = await fetch(`translations/${lang}.json`);
   const data = await response.json();
   return data;
 };
