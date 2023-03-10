@@ -137,9 +137,18 @@ p {
 
 
 .testimonial-image {
-    width: 10%;
+    width: 5%;
     border-radius: 100%;
     margin: 20px;
+}
+
+.testimonial-text {
+    border-top: 1px solid #efefef;
+}
+
+.testimonial-number {
+    font-size: 48px;
+    font-weight: 700;
 }
 
 
