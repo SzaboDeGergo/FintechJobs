@@ -144,6 +144,7 @@ p {
 
 .testimonial-text {
     border-top: 1px solid #efefef;
+    padding: 2% 7%;
 }
 
 .testimonial-number {
@@ -151,6 +152,18 @@ p {
     font-weight: 700;
 }
 
+.contacthead {
+    margin-bottom: 30px;
+}
+
+.contactdiv {
+    border: 2px solid #FF9B00;
+    border-radius: 10px;
+}
+
+.contactform {
+    background-color: #FF9B00;
+}
 
 
 
