@@ -45,3 +45,4 @@ document.querySelectorAll(".lang-btn").forEach(function (btn) {
         setLang(lang);
     });
 });
+
