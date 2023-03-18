@@ -7,7 +7,7 @@ function setLang(lang) {
     var pageName = window.location.pathname.split("/").pop();
 
     // Redirect to the corresponding language HTML file for the current page
-    window.location.href = lang + "/" + pageName;
+    window.location.href = "/" + lang + "/" + pageName;
 }
 
 // Function to get the value of a cookie
@@ -45,4 +45,3 @@ document.querySelectorAll(".lang-btn").forEach(function (btn) {
         setLang(lang);
     });
 });
-
