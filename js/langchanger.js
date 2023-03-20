@@ -7,7 +7,10 @@ function setLang(lang) {
     var pageName = window.location.pathname.split("/").pop();
 
     // Redirect to the corresponding language HTML file for the current page
-    window.location.href = "/" + lang + "/" + pageName;
+    window.location.href = "/FintechJobs/" + lang + "/" + pageName;
+
+    // FOR LATER WITHOUT GITHUB
+    // window.location.href = "/" + lang + "/" + pageName;
 }
 
 // Function to get the value of a cookie
