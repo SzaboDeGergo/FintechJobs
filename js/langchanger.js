@@ -3,26 +3,23 @@ function setLang(lang) {
     // Set a cookie with the selected language code
     document.cookie = "lang=" + lang + "; path=/";
 
-    // Get the current page's filename and directory
-    var urlParts = window.location.pathname.split("/");
-    var pageName = urlParts.pop();
-    var directory = urlParts.join("/");
+    // Get the current page's filename
+    var pageName = window.location.pathname.split("/").pop();
 
-    // If the current page is the root index.html, redirect to the corresponding language HTML file in the root directory
-    if (pageName === "index.html" && directory === "/FintechJobs") {
-        window.location.href = window.location.origin + "/" + lang + "/index.html";
-    }
-    // Otherwise, redirect to the corresponding language HTML file in the current directory
-    else {
-        // Check if the current directory already contains the language code
-        if (directory.endsWith("/" + lang)) {
-            window.location.href = window.location.origin + directory + "/" + pageName;
-        }
-        // If not, redirect to the corresponding language HTML file in the language-specific directory
-        else {
-            window.location.href = window.location.origin + directory + "/" + lang + "/" + pageName;
-        }
-    }
+    // Define the language directory mappings
+    var directoryMap = {
+        "en": "",
+        "hu": "/hu",
+        "nl": "/nl"
+    };
+
+    // Get the directory for the selected language
+    var directory = directoryMap[lang];
+
+    // Redirect to the corresponding language HTML file for the current page
+    setTimeout(function () {
+        window.location.href = window.location.origin + directory + "/" + pageName;
+    }, 10);
 }
 
 // Function to get the value of a cookie
