@@ -3,11 +3,17 @@ function setLang(lang) {
     // Set a cookie with the selected language code
     document.cookie = "lang=" + lang + "; path=/";
 
-    // Get the current page's filename
-    var pageName = window.location.pathname.split("/").pop();
-
     // Redirect to the corresponding language HTML file for the current page
-    window.location.href = window.location.origin + "/" + lang + "/" + pageName;
+    var pagePath = window.location.pathname.split("/");
+    var langFolder = "/" + lang + "/";
+    if (pagePath.length > 2 && pagePath[1] !== lang) {
+        // If the current page is in a language folder, replace the folder name
+        pagePath[1] = lang;
+    } else {
+        // Otherwise, add the language folder to the path
+        pagePath.splice(1, 0, lang);
+    }
+    window.location.href = window.location.origin + pagePath.join("/") + window.location.hash;
 }
 
 // Function to get the value of a cookie
