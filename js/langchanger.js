@@ -8,11 +8,20 @@ function setLang(lang) {
     var pageName = urlParts.pop();
     var directory = urlParts.join("/");
 
-    // Redirect to the corresponding language HTML file for the current page
+    // If the current page is the root index.html, redirect to the corresponding language HTML file in the root directory
     if (pageName === "index.html" && directory === "/FintechJobs") {
         window.location.href = window.location.origin + "/" + lang + "/index.html";
-    } else {
-        window.location.href = window.location.origin + directory + "/" + lang + "/" + pageName;
+    }
+    // Otherwise, redirect to the corresponding language HTML file in the current directory
+    else {
+        // Check if the current directory already contains the language code
+        if (directory.endsWith("/" + lang)) {
+            window.location.href = window.location.origin + directory + "/" + pageName;
+        }
+        // If not, redirect to the corresponding language HTML file in the language-specific directory
+        else {
+            window.location.href = window.location.origin + directory + "/" + lang + "/" + pageName;
+        }
     }
 }
 
